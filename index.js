@@ -439,7 +439,10 @@
         init: function () {
             // Hide the static icon.
             // document.querySelector('.' + Runner.classes.ICON).style.visibility = 'hidden';
-
+			if (IS_MOBILE) {
+				var box = document.getElementById("hint");
+				box.style.visibility="hidden";
+            }
             this.adjustDimensions();
             this.setSpeed();
 
@@ -467,8 +470,10 @@
             this.tRex = new Trex(this.canvas, this.spriteDef.TREX);
 
             this.outerContainerEl.appendChild(this.containerEl);
-
+			
             if (IS_MOBILE) {
+				var box = document.getElementById("begin_text");
+				box.style.visibility="hidden";
                 this.createTouchController();
             }
 
