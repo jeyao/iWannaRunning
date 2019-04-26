@@ -20,12 +20,14 @@ html, body {
   visibility:visible;
   position: relative;
 }
+
+
 .hint{
 	position: relative;
 }
 
 .hint p{
-	margin-left:20%
+	margin-left:20%;
 }
 
 
